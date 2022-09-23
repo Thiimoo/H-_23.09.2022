@@ -18,7 +18,7 @@ public class HalloJavamitForEach {
             System.out.print(" ");
         }
 
-        System.out.println("\n");   
+        System.out.println("\n");
 
         stringList.forEach((String s) -> System.out.println(s));
 
