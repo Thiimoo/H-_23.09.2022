@@ -1,11 +1,15 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 public class NumberTester implements NumberTest{
 
    private String filename;
-   private NumberTester oddEvenTester;
+   private NumberTest oddEvenTester;
 
-   private NumberTester primeTester;
+   private NumberTest primeTester;
 
-   private NumberTester palindromeTester;
+   private NumberTest palindromeTester;
 
    public NumberTester(String filename)
    {
@@ -13,16 +17,68 @@ public class NumberTester implements NumberTest{
        //TODO
    }
 
-   public void setOddEvenTester(NumberTester oddEvenTester)
+   public void test()
+   {
+      try {
+         File f = new File("Numbers.txt");
+         Scanner s = new Scanner(f);
+         String line = null;
+         String[] parts;
+         while (s.hasNextLine())
+         {
+            line = s.nextLine();
+            parts = line.split(" ");
+            switch(Integer.parseInt(parts[0]))
+            {
+               case 1:
+                  if(oddEvenTester.testNumber(Integer.parseInt(parts[1])))
+                  {
+                     System.out.println("Even");
+                  }
+                  else
+                  {
+                     System.out.println("Odd");
+                  }
+                  break;
+               case 2:
+                  if(primeTester.testNumber(Integer.parseInt(parts[1])))
+                  {
+                     System.out.println("Prime");
+                  }
+                  else
+                  {
+                     System.out.println("Not a Prime");
+                  }
+                  break;
+               case 3:
+                  if(palindromeTester.testNumber(Integer.parseInt(parts[1])))
+                  {
+                     System.out.println("Palindrome");
+                  }
+                  else
+                  {
+                     System.out.println("Not a Palindrome");
+                  }
+                  break;
+               default:
+                  System.out.println("Keine richtige Operation");
+            }
+         }
+      } catch (FileNotFoundException e) {
+         throw new RuntimeException(e);
+      }
+   }
+
+   public void setOddEvenTester(NumberTest oddEvenTester)
    {
       this.oddEvenTester = oddEvenTester;
    }
 
-   public void setPrimeTester(NumberTester primeTester) {
+   public void setPrimeTester(NumberTest primeTester) {
       this.primeTester = primeTester;
    }
 
-   public void setPalindromeTester(NumberTester palindromeTester) {
+   public void setPalindromeTester(NumberTest palindromeTester) {
       this.palindromeTester = palindromeTester;
    }
 
