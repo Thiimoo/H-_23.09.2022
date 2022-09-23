@@ -44,7 +44,7 @@
     "last_opened_file_path": "C:/Users/Timo Reitböck/Documents/Hue_23.09.2022/H-_23.09.2022/Hue.2309.2022"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="HalloJavamitForEach" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="HalloJavamitForEach" />
       <module name="Hue.2309.2022" />
@@ -52,8 +52,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Hue.2309.2022" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.HalloJavamitForEach" />
       </list>
     </recent_temporary>

@@ -24,5 +24,6 @@ public class Main {
         numberTester.setOddEvenTester(isEven);
         numberTester.setPrimeTester(isPrime);
         numberTester.setPalindromeTester(isPalindrome);
+        numberTester.test();
     }
 }
