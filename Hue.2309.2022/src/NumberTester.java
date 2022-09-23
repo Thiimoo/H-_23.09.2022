@@ -1,9 +1,7 @@
-public class NumberTester {
+public class NumberTester implements NumberTest{
 
    private String filename;
    private NumberTester oddEvenTester;
-
-
 
    private NumberTester primeTester;
 
@@ -26,5 +24,10 @@ public class NumberTester {
 
    public void setPalindromeTester(NumberTester palindromeTester) {
       this.palindromeTester = palindromeTester;
+   }
+
+   @Override
+   public boolean testNumber(int number) {
+      return false;
    }
 }
