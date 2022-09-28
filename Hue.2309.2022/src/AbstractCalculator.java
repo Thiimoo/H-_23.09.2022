@@ -3,18 +3,13 @@ public abstract class AbstractCalculator {
     protected CalculationOperation add;
     protected CalculationOperation subtract;
     protected CalculationOperation multiply;
-    protected CalculationOperation divite;
+    protected CalculationOperation divide;
 
     public AbstractCalculator(CalculationOperation add, CalculationOperation subtract, CalculationOperation multiply, CalculationOperation divite) {
         this.add = add;
         this.subtract = subtract;
         this.multiply = multiply;
-        this.divite = divite;
-    }
-
-    public void test()
-    {
-
+        this.divide = divite;
     }
 
     public abstract Number add(Number a,Number b);

@@ -29,9 +29,10 @@ public class Main {
         numberTester.test();
 
         CalculationOperation add = (Number x,Number y) -> {return new Number(x.getA()+y.getA(),x.getB()+y.getB());};
-        CalculationOperation subtract = (Number x,Number y) -> {return new Number(x.getA()+y.getA(),x.getB()+y.getB());};
-        CalculationOperation multiply = (Number x,Number y) -> {return new Number(x.getA()+y.getA(),x.getB()+y.getB());};
-        CalculationOperation divide = (Number x,Number y) -> {return new Number(x.getA()+y.getA(),x.getB()+y.getB());};
+        CalculationOperation subtract = (Number x,Number y) -> {return new Number(x.getA()-y.getA(),x.getB()-y.getB());};
+        CalculationOperation multiply = (Number x,Number y) -> {return new Number(x.getA()*y.getA(),x.getB()*y.getB());};
+        CalculationOperation divide = (Number x,Number y) -> {
+            return new Number(x.getA()*y.getB(),x.getB()*y.getA());};
 
         RationalCalculator abR = new RationalCalculator(add,subtract,multiply,divide);
 
@@ -81,21 +82,81 @@ public class Main {
                     switch (input)
                     {
                         case 1:
-                            erg = abR.add(eins, zwei);
+                            erg = abR.add.calc(eins, zwei);
                             System.out.println(erg.getA());
                             System.out.println("-");
                             System.out.println(erg.getB());
                             break;
                         case 2:
+                            erg = abR.subtract.calc(eins, zwei);
+                            System.out.println(erg.getA());
+                            System.out.println("-");
+                            System.out.println(erg.getB());
                             break;
                         case 3:
+                            erg = abR.multiply.calc(eins, zwei);
+                            System.out.println(erg.getA());
+                            System.out.println("-");
+                            System.out.println(erg.getB());
                             break;
                         case 4:
+                            erg = abR.divide.calc(eins, zwei);
+                            System.out.println(erg.getA());
+                            System.out.println("-");
+                            System.out.println(erg.getB());
                             break;
                         default:
+                            System.out.println("Falsche Eingabe!");
+                            break;
                     }
                     break;
                 case 2:
+                    System.out.println("Enter factor X for vector 1 :");
+                    d1 = scanner.nextDouble();
+                    System.out.println("Enter factor Y for vector 1 :");
+                    n1 = scanner.nextDouble();
+                    System.out.println("Enter factor X for vector 2 :");
+                    d2 = scanner.nextDouble();
+                    System.out.println("Enter factor Y for vector 2 :");
+                    n2 = scanner.nextDouble();
+                    eins = new Number(d1,n1);
+                    zwei = new Number(d2, n2);
+                    System.out.println("Choose Operation:");
+                    System.out.println("1 - add");
+                    System.out.println("2 - subtract");
+                    System.out.println("3 - multiply");
+                    System.out.println("4 - divide");
+                    input = scanner.nextInt();
+                    switch (input)
+                    {
+                        case 1:
+                            erg = abV.add(eins, zwei);
+                            System.out.println(erg.getA());
+                            System.out.println("-");
+                            System.out.println(erg.getB());
+                            break;
+                        case 2:
+                            erg = abV.subtract(eins, zwei);
+                            System.out.println(erg.getA());
+                            System.out.println("-");
+                            System.out.println(erg.getB());
+                            break;
+                        case 3:
+                            erg = abV.multiply(eins, zwei);
+                            System.out.println(erg.getA());
+                            System.out.println("-");
+                            System.out.println(erg.getB());
+                            break;
+                        case 4:
+                            erg = abV.divide(eins, zwei);
+                            System.out.println(erg.getA());
+                            System.out.println("-");
+                            System.out.println(erg.getB());
+                            break;
+                        default:
+                            System.out.println("Falsche Eingabe!");
+                            break;
+                    }
                     break;
                 case 3:
                     return;
