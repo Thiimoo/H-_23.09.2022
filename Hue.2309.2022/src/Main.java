@@ -155,14 +155,14 @@ public class Main {
                             System.out.println(erg.getA());
                             break;
                         default:
-                            System.out.println("Falsche Eingabe!");
+                            System.out.println("Wrong Operation!");
                             break;
                     }
                     break;
                 case 3:
                     return;
                 default:
-                    System.out.println("Falsche Eingabe!");
+                    System.out.println("Wrong Input!");
                     break;
             }
         }
