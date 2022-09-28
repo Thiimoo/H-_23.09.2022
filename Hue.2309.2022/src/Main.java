@@ -28,6 +28,11 @@ public class Main {
         numberTester.setPalindromeTester(isPalindrome);
         numberTester.test();
 
+        System.out.println("\n");
+        System.out.println("\n");
+        System.out.println("\n");
+
+
         CalculationOperation add = (Number x,Number y) -> {return new Number(x.getA()+y.getA(),x.getB()+y.getB());};
         CalculationOperation subtract = (Number x,Number y) -> {return new Number(x.getA()-y.getA(),x.getB()-y.getB());};
         CalculationOperation multiply = (Number x,Number y) -> {return new Number(x.getA()*y.getA(),x.getB()*y.getB());};
