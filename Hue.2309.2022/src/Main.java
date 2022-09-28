@@ -31,15 +31,14 @@ public class Main {
         CalculationOperation add = (Number x,Number y) -> {return new Number(x.getA()+y.getA(),x.getB()+y.getB());};
         CalculationOperation subtract = (Number x,Number y) -> {return new Number(x.getA()-y.getA(),x.getB()-y.getB());};
         CalculationOperation multiply = (Number x,Number y) -> {return new Number(x.getA()*y.getA(),x.getB()*y.getB());};
-        CalculationOperation divide = (Number x,Number y) -> {
-            return new Number(x.getA()*y.getB(),x.getB()*y.getA());};
+        CalculationOperation divide = (Number x,Number y) -> {return new Number(x.getA()*y.getB(),x.getB()*y.getA());};
 
         RationalCalculator abR = new RationalCalculator(add,subtract,multiply,divide);
 
         add = (Number x,Number y) -> {return new Number(x.getA()+y.getA(),x.getB()+y.getB());};
         subtract = (Number x,Number y) -> {return new Number(x.getA()+y.getA(),x.getB()+y.getB());};
-        multiply = (Number x,Number y) -> {return new Number(x.getA()+y.getA(),x.getB()+y.getB());};
-        divide = (Number x,Number y) -> {return new Number(x.getA()+y.getA(),x.getB()+y.getB());};
+        multiply = (Number x,Number y) -> {return new Number(x.getA()*y.getB(),x.getB()*y.getA());};
+        divide = (Number x,Number y) -> {return new Number(x.getA()*x.getB(),x.getB()+y.getB());};
 
         VectorCalculator abV = new VectorCalculator(add,subtract,multiply,divide);
 
@@ -152,10 +151,8 @@ public class Main {
                             break;
                         case 4:
                             erg = abV.divide.calc(eins, zwei);
-                            System.out.println("X:");
+                            System.out.println("Skalar:");
                             System.out.println(erg.getA());
-                            System.out.println("Y:");
-                            System.out.println(erg.getB());
                             break;
                         default:
                             System.out.println("Falsche Eingabe!");

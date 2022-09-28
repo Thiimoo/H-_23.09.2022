@@ -5,8 +5,6 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class HalloJavamitForEach {
-
-
     public static void main(String[] args) {
         List<String> stringList = new ArrayList<>();
         stringList.add("Hallo");
