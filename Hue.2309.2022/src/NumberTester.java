@@ -20,7 +20,7 @@ public class NumberTester implements NumberTest{
    public void test()
    {
       try {
-         File f = new File("C:\\Users\\Timo Reitböck\\Documents\\Hue_23.09.2022\\H-_23.09.2022\\Hue.2309.2022\\src\\Numbers.txt");
+         File f = new File("D:\\Repositorys\\H-_23.09.2022\\Hue.2309.2022\\src\\Numbers.txt");
          Scanner s = new Scanner(f);
          String line = null;
          String[] parts;

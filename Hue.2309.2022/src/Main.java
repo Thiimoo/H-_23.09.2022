@@ -25,5 +25,12 @@ public class Main {
         numberTester.setPrimeTester(isPrime);
         numberTester.setPalindromeTester(isPalindrome);
         numberTester.test();
+
+        CalculationOperation add = (Number x,Number y) -> {return new Number(x.getA()+y.getA(),x.getB()+y.getB());};
+        CalculationOperation subtract = (Number x,Number y) -> {return new Number(x.getA()+y.getA(),x.getB()+y.getB());};
+        CalculationOperation multiply = (Number x,Number y) -> {return new Number(x.getA()+y.getA(),x.getB()+y.getB());};
+        CalculationOperation divide = (Number x,Number y) -> {return new Number(x.getA()+y.getA(),x.getB()+y.getB());};
+
+        AbstractCalculator ab = new RationalCalculator(add,subtract,multiply,divide);
     }
 }
