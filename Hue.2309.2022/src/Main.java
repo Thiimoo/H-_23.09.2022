@@ -130,27 +130,31 @@ public class Main {
                     switch (input)
                     {
                         case 1:
-                            erg = abV.add(eins, zwei);
+                            erg = abV.add.calc(eins, zwei);
+                            System.out.println("X:");
                             System.out.println(erg.getA());
-                            System.out.println("-");
+                            System.out.println("Y:");
                             System.out.println(erg.getB());
                             break;
                         case 2:
-                            erg = abV.subtract(eins, zwei);
+                            erg = abV.subtract.calc(eins, zwei);
+                            System.out.println("X:");
                             System.out.println(erg.getA());
-                            System.out.println("-");
+                            System.out.println("Y:");
                             System.out.println(erg.getB());
                             break;
                         case 3:
-                            erg = abV.multiply(eins, zwei);
+                            erg = abV.multiply.calc(eins, zwei);
+                            System.out.println("X:");
                             System.out.println(erg.getA());
-                            System.out.println("-");
+                            System.out.println("Y:");
                             System.out.println(erg.getB());
                             break;
                         case 4:
-                            erg = abV.divide(eins, zwei);
+                            erg = abV.divide.calc(eins, zwei);
+                            System.out.println("X:");
                             System.out.println(erg.getA());
-                            System.out.println("-");
+                            System.out.println("Y:");
                             System.out.println(erg.getB());
                             break;
                         default:
@@ -161,6 +165,7 @@ public class Main {
                 case 3:
                     return;
                 default:
+                    System.out.println("Falsche Eingabe!");
                     break;
             }
         }
